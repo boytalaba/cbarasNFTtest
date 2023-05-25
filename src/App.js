@@ -19,6 +19,7 @@ import {
 
 import Faq from "../src/components/FAQs";
 import MarqueeNft from "../src/components/MarqueeNft";
+import { TeamInfo } from "../src/components/Data";
 import logo from "../src/assets/FountainheadLogo-1.png";
 
 const truncate = (input, len) =>
@@ -159,7 +160,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! `
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit https://nuwton.io/ to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -176,8 +177,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 50) {
-      newMintAmount = 50;
+    if (newMintAmount > 20) {
+      newMintAmount = 20;
     }
     setMintAmount(newMintAmount);
   };
@@ -215,15 +216,12 @@ function App() {
             <img src={logo} alt="" />
           </div>
           {/* <div className="icons">
-            <a href="https://discord.gg/7AfjqZuwgG">
+            <a href="https://t.me/MOONSHIBSNFT">
               <i className="fab fa-discord"></i>
             </a>
-            <a href="https://twitter.com/metabulls_">
+            <a href="https://twitter.com/MoonShibs">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/BULLSNFT/">
-              <i className="fab fa-instagram"></i>
-            </a>
+           
             {!wallet ? (
               <ConnectButton>Connect Wallet</ConnectButton>
             ) : wallet ? (
@@ -234,12 +232,12 @@ function App() {
 
         <div className="container">
           <div className="text">
-            <h1>Poopsie Gensis NFTs</h1>
+            <h1>MoonShibs NFTs</h1>
             <p>
-            POOPsie Genesis is a collection of 999 limited unique nfts with rich traits and rarity on POM, it's not just your ordinary meme
+            A collection of 4 444 unique and randomly generated NFTs that feature a richly diverse and unique pool of rarity-powered traits that exist on EthereumPow. Holders can participate in nft drops, nft pass and many more
             </p>
 
-            <a href="https://t.me/PoopVend">
+            <a href="https://t.me/MOONSHIBSNFT">
               <button>Join Telegram</button>
             </a>
           </div>
@@ -247,9 +245,9 @@ function App() {
             <div className="nft-image">
               <div className="title-container">
                 <div className="title">
-                  <h5>Poopsie Genesis</h5>
+                  <h5>MoonShibs NFT</h5>
                   <p>
-                    Price: <b>555 POM </b>
+                   Minting Price: <b>0.25 ETHW </b>
                   </p>
                 </div>
               </div>
@@ -384,45 +382,36 @@ function App() {
 
       <AboutSection>
         <h1>About</h1>
-        
-
         <p>
-          You are welcome to explore Poopsies genesis NFTs, which are digitally altered
-          pieces of masterful arts. By placing the subjects of these
-          arts in new digitally imagined environments, we have given more
-          room to the expression of the different realities of our Proof of memes Experience.
+        All Moonshibs are unique and programmatically generated with over 100 possible traits, including fur, clothing, eyes, mouth, headwear, and background. Even though all Moonshibs are out of this world, some are slightly more rare than others.
         </p>
 
         <p>
-          We also intends on building the largest NFT Community out of proof of memes blockchain,
-          which leads on to a community where creatives can express, explore,
-          and interact with each other’s creations. 
+        Moonshibs are stored as ERC-721 tokens on the EthereumPow blockchain and hosted on IPFS. Purchasing Moonshibs cost 0.25 ETHW.
+        </p>
+
+        <p>
+          
         </p>
       </AboutSection>
 
       <HistorySection>
-        <h1>The Poopsie Genesis</h1>
-
-        
+        <h1>The MoonShibs Project</h1>
 
         <p>
-        Together with our very own NFT collection #POOPsieGenesis
+        Moonshibs is a collection of 4444 unique NFTs living in Ethereum Pow. What makes this project different than any other NFT project is that they are very unique and made details by details. Of the 4444 Moonshibs, there are different species (colors) of shiba and different layers and the total possible combinations.We wanted to make something truly different.
+        </p>
 
-POOPsie Genesis is a collection of 999 limited unique nfts with rich traits and rarity on POM, it's not just your ordinary meme
+        <p>
+          
+        </p>
 
-SUPPLY: 999
-Price: 555 POM each
-Max per tx: 10
+        <p>
+         
+        </p>
 
-holders gets a certain percentage on royalties in our NFT MARKETPLACE
-
-holders gets airdrop for our upcoming token launch $Poops
-
-holders will be automatically whitelisted for our next collection. info will be announce with its utility.
-
-
-
-Total of 20% of supply will be airdropped for holders of POOPsie Genesis. 
+        <p>
+          
         </p>
       </HistorySection>
 
@@ -436,12 +425,21 @@ Total of 20% of supply will be airdropped for holders of POOPsie Genesis.
       <Footer>
         <div className="text">
           <p>
-            Copyright © 2023 Poopsie Genesis
+            Copyright © 2022 Moonshibs
             <br />
             All rights reserved
           </p>
         </div>
 
+        <div className="socials">
+          <a href="https://t.me/MOONSHIBSNFT">
+            <i className="fab fa-discord"></i>
+          </a>
+          <a href="https://twitter.com/MoonShibs">
+            <i className="fab fa-twitter"></i>
+          </a>
+          
+        </div>
 
         <div className="logo">
           <img src={logo} alt="" />
