@@ -1,0 +1,23 @@
+{
+  "CONTRACT_ADDRESS": "0xf8a14c699F75fa1638567cAB375e33870dBB9448",
+  "SCAN_LINK": "https://scan.pulsechain.com/token/0xf8a14c699F75fa1638567cAB375e33870dBB9448/token-transfers",
+  "NETWORK": {
+    "NAME": "Pulsechain",
+    "SYMBOL": "PLS",
+    "ID": 10001
+  },
+  "NFT_NAME": "MoonShibs",
+  "SYMBOL": "MoonShibs",
+  "MAX_SUPPLY": 4444,
+  "WEI_COST": "50000000000000000000000000", 
+  "DISPLAY_COST":50000,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "",
+  "MARKETPLACE_LINK": "",
+  "SHOW_BACKGROUND": true
+}
+
+
+
+
+
