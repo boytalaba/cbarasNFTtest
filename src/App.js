@@ -19,7 +19,6 @@ import {
 
 import Faq from "../src/components/FAQs";
 import MarqueeNft from "../src/components/MarqueeNft";
-import { TeamInfo } from "../src/components/Data";
 import logo from "../src/assets/FountainheadLogo-1.png";
 
 const truncate = (input, len) =>
@@ -145,7 +144,7 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(mintAmount)
+      .mint(blockchain.account, mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -160,7 +159,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit https://opensea.io/ to view it.`
+          `WOW, the ${CONFIG.NFT_NAME} is yours! `
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -177,8 +176,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 5) {
-      newMintAmount = 5;
+    if (newMintAmount > 50) {
+      newMintAmount = 50;
     }
     setMintAmount(newMintAmount);
   };
@@ -235,24 +234,22 @@ function App() {
 
         <div className="container">
           <div className="text">
-            <h1>Ini Oluwa’s NFTs</h1>
+            <h1>Poopsie Gensis NFTs</h1>
             <p>
-              The first drop from the Fountainhead project. 225 She-Soul tokens
-              launching on the 31st of January, 2022 on the Polygon blockchain
-              for 33 MATIC(Polygon) each!
+            POOPsie Genesis is a collection of 999 limited unique nfts with rich traits and rarity on POM, it's not just your ordinary meme
             </p>
 
-            <a href="https://discord.gg/aA5bbD7Bxj">
-              <button>Join Discord</button>
+            <a href="https://t.me/PoopVend">
+              <button>Join Telegram</button>
             </a>
           </div>
           <div className="image">
             <div className="nft-image">
               <div className="title-container">
                 <div className="title">
-                  <h5>She-Soul Tokens</h5>
+                  <h5>Poopsie Genesis</h5>
                   <p>
-                    Current bid: <b>33 MATIC </b>
+                    Price: <b>555 POM </b>
                   </p>
                 </div>
               </div>
@@ -387,75 +384,49 @@ function App() {
 
       <AboutSection>
         <h1>About</h1>
+        
+
         <p>
-          Ini Oluwa, popularly known as the Billionaire Artist, is a visual
-          artist and has been so for the past 10 years. He spends his time
-          making art with acrylic on canvas in his personal painting studio. He
-          describes himself as a painter of essence on mood.
+          You are welcome to explore Poopsies genesis NFTs, which are digitally altered
+          pieces of masterful arts. By placing the subjects of these
+          arts in new digitally imagined environments, we have given more
+          room to the expression of the different realities of our Proof of memes Experience.
         </p>
 
         <p>
-          You are welcome to explore his NFTs, which are digitally altered
-          pieces of his masterful paintings. By placing the subjects of these
-          paintings in new digitally imagined environments, he has given more
-          room to the expression of the different realities of our human
-          experience.
-        </p>
-
-        <p>
-          Ini also intends on building the largest NFT Community out of Africa,
-          which leads on to a metaverse where creatives can express, explore,
-          and interact with each other’s creations. This is very similar to a
-          physical community of about 200 members he currently runs, called
-          Midiums.
+          We also intends on building the largest NFT Community out of proof of memes blockchain,
+          which leads on to a community where creatives can express, explore,
+          and interact with each other’s creations. 
         </p>
       </AboutSection>
 
       <HistorySection>
-        <h1>The Fountainhead Project</h1>
+        <h1>The Poopsie Genesis</h1>
+
+        
 
         <p>
-          The first of many such projects to come. The Fountainhead NFT
-          collection is a series of digitally altered paintings from the
-          Fountainhead series of paintings done by Ini in his studio between
-          2020 & 2021.
-        </p>
+        Together with our very own NFT collection #POOPsieGenesis
 
-        <p>
-          Between January 2022 and March 2023, there will be 15 NFT drops from
-          this collection – at the end of each month. 225 tokens per month!
-        </p>
+POOPsie Genesis is a collection of 999 limited unique nfts with rich traits and rarity on POM, it's not just your ordinary meme
 
-        <p>
-          For each NFT that you purchase, you would get an originally signed
-          print of the NFT, and all you would have to pay for is the framing and
-          shipping. Furthermore, for every 5 NFTs that you purchase, you would
-          get one free NFT from the next drop!
-        </p>
+SUPPLY: 999
+Price: 555 POM each
+Max per tx: 10
 
-        <p>
-          The funds from the Fountainhead project are going into creating a
-          virtual world for creatives out of Africa, a metaverse called Midiums.
+holders gets a certain percentage on royalties in our NFT MARKETPLACE
+
+holders gets airdrop for our upcoming token launch $Poops
+
+holders will be automatically whitelisted for our next collection. info will be announce with its utility.
+
+
+
+Total of 20% of supply will be airdropped for holders of POOPsie Genesis. 
         </p>
       </HistorySection>
 
-      <Team>
-        <h1>The Team</h1>
-        <div className="team-container">
-          {TeamInfo.map((item) => {
-            return (
-              <div className="team-info">
-                <div
-                  style={{ backgroundImage: `url(${item.pic})` }}
-                  className="team-pic"
-                ></div>
-                <h4>{item.name}</h4>
-                <p>{item.postion}</p>
-              </div>
-            );
-          })}
-        </div>
-      </Team>
+    
 
       <FrequentlyAskedQuestions>
         <h1>FAQs</h1>
@@ -465,26 +436,12 @@ function App() {
       <Footer>
         <div className="text">
           <p>
-            Copyright © 2022 Fountainhead
+            Copyright © 2023 Poopsie Genesis
             <br />
             All rights reserved
           </p>
         </div>
 
-        <div className="socials">
-          <a href="https://discord.gg/aA5bbD7Bxj">
-            <i className="fab fa-discord"></i>
-          </a>
-          <a href="https://twitter.com/ini_oluwa_">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/ini.oluwa/">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/channel/UCaw6e3V5mTlV_Ihu2BWE8aQ">
-            <i className="fab fa-youtube"></i>
-          </a>
-        </div>
 
         <div className="logo">
           <img src={logo} alt="" />
