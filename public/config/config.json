@@ -4,11 +4,11 @@
   "NETWORK": {
     "NAME": "Pulsechain",
     "SYMBOL": "PLS",
-    "ID": 10001
+    "ID": 369
   },
-  "NFT_NAME": "MoonShibs",
-  "SYMBOL": "MoonShibs",
-  "MAX_SUPPLY": 4444,
+  "NFT_NAME": "Capy Baras",
+  "SYMBOL": "Cbaras",
+  "MAX_SUPPLY": 999,
   "WEI_COST": "50000000000000000000000000", 
   "DISPLAY_COST":50000,
   "GAS_LIMIT": 285000,
